@@ -37,7 +37,7 @@ import altair as alt
 st.set_page_config(page_title = "LME Certification System", page_icon = "👋", layout = "wide")
 
 # Configure pdfkit to use the binary
-config = pdfkit.configuration(wkhtmltopdf=wkhtmltopdf_path)
+# config = pdfkit.configuration(wkhtmltopdf=wkhtmltopdf_path)
 
 def session():
     if 'logged_in' not in st.session_state:
@@ -228,13 +228,13 @@ def main():
             else: 
                 st.error('Pic generation error')
 
-            html = template.render(student=student_str,course=course_str,date=date.today().strftime("%B %d, %Y"),)
-            pdf = pdfkit.from_string(html, False,configuration=config)
-            file = student_str +'_' + course_str +'_'+ datetime.datetime.now().strftime("%Y%m%d") +'.pdf'
-            if pdf:
-                st.download_button("⬇️ Download PDF Certification",data=pdf,file_name=file,mime="application/octet-stream",)
-            else: 
-                st.error('PDF Generation error')
+            # html = template.render(student=student_str,course=course_str,date=date.today().strftime("%B %d, %Y"),)
+            # pdf = pdfkit.from_string(html, False,configuration=config)
+           #  file = student_str +'_' + course_str +'_'+ datetime.datetime.now().strftime("%Y%m%d") +'.pdf'
+           #  if pdf:
+             #   st.download_button("⬇️ Download PDF Certification",data=pdf,file_name=file,mime="application/octet-stream",)
+           # else: 
+            #    st.error('PDF Generation error')
 
         else: 
             st.error('Score <80, can not get certification')
