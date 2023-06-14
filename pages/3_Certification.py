@@ -36,9 +36,6 @@ import altair as alt
 
 st.set_page_config(page_title = "LME Certification System", page_icon = "👋", layout = "wide")
 
-wkhtmltopdf_path = os.path.join(os.getcwd(), 'wkhtmltopdf', 'bin', 'wkhtmltopdf.exe')
-if not os.path.isfile(wkhtmltopdf_path):
-    raise FileNotFoundError("wkhtmltopdf executable not found at %s" % wkhtmltopdf_path)
 # Configure pdfkit to use the binary
 config = pdfkit.configuration(wkhtmltopdf=wkhtmltopdf_path)
 
