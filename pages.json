@@ -1,0 +1,38 @@
+{
+    "d9cdddfdee20e79a137448fd2cfa13b8": {
+        "page_script_hash": "d9cdddfdee20e79a137448fd2cfa13b8",
+        "page_name": "login",
+        "icon": "",
+        "script_path": "D:\\Codes\\new_engine\\login.py"
+    },
+    "7072bbcad5ac1427ae69ff69c91660d8": {
+        "page_script_hash": "7072bbcad5ac1427ae69ff69c91660d8",
+        "page_name": "User_Home",
+        "icon": "🏠",
+        "script_path": "D:\\Codes\\new_engine\\pages\\1_User Home.py"
+    },
+    "5067516d77b7b31b44436562f7241e27": {
+        "page_script_hash": "5067516d77b7b31b44436562f7241e27",
+        "page_name": "Take_Exam",
+        "icon": "✏️",
+        "script_path": "D:\\Codes\\new_engine\\pages\\2_Take Exam.py"
+    },
+    "7b1e28e18e48ccf684639cd759ba1242": {
+        "page_script_hash": "7b1e28e18e48ccf684639cd759ba1242",
+        "page_name": "Certification",
+        "icon": "",
+        "script_path": "D:\\Codes\\new_engine\\pages\\3_Certification.py"
+    },
+    "ef8fc43040161c80a9af9f666f42d8b0": {
+        "page_script_hash": "ef8fc43040161c80a9af9f666f42d8b0",
+        "page_name": "Course_Admin",
+        "icon": "",
+        "script_path": "D:\\Codes\\new_engine\\pages\\4_Course Admin.py"
+    },
+    "d0eaaeb26375a1cfde949ec3ab563bc2": {
+        "page_script_hash": "d0eaaeb26375a1cfde949ec3ab563bc2",
+        "page_name": "Data_Summary",
+        "icon": "",
+        "script_path": "D:\\Codes\\new_engine\\pages\\5_Data Summary.py"
+    }
+}
