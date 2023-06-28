@@ -161,15 +161,15 @@ def gen_cert(username):
         save_pic, file_name = generator(student_str,course_str)
 
 
-        if save_pic:
-            st.balloons()
-            # st.write(html, unsafe_allow_html=True)
-            # st.write("")
-            with open(save_pic, "rb") as file:
-                btn = st.download_button(label=" ⬇️ Download PNG Certification",data=file,file_name=file_name,mime="image/png")
-                if btn:
-                    st.success('Download finish') 
-            st.success("🎉 Your diploma was generated!")    
-        else: 
-            st.error('Pic generation error')
+    if save_pic:
+        st.balloons()
+        # st.write(html, unsafe_allow_html=True)
+        # st.write("")
+        with open(save_pic, "rb") as file:
+            btn = st.download_button(label=" ⬇️ Download PNG Certification",data=file,file_name=file_name,mime="image/png")
+            if btn:
+                st.success('Download finish') 
+        st.success("🎉 Your diploma was generated!")    
+    else: 
+        st.error('Pic generation error')
 
