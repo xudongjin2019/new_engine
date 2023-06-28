@@ -117,7 +117,7 @@ admin_list = ['Jeremy Xu', 'jeremyxu', 'gteadmin', 'xudj1']
 
 
 def main():
-    user_name,user_mail,user_dept = get_user(self)
+    user_name,user_mail,user_dept = get_user(__login__obj)
     select = set_sidebar(user_name)
     LOGGED_IN = __login__obj.build_login_ui()
 
