@@ -183,6 +183,4 @@ def gen_cert(username):
           #  else: 
           #      st.error('PDF Generation error')
 
-if __name__ == "__main__":
-    session()
-    gen_cert()
+
