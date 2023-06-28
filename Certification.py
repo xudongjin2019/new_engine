@@ -20,11 +20,11 @@ import altair as alt
 from exam import welcome,load_score
 
 
-wkhtmltopdf_path = os.path.join(os.getcwd(), 'wkhtmltopdf', 'bin', 'wkhtmltopdf.exe')
-if not os.path.isfile(wkhtmltopdf_path):
-    raise FileNotFoundError("wkhtmltopdf executable not found at %s" % wkhtmltopdf_path)
+# wkhtmltopdf_path = os.path.join(os.getcwd(), 'wkhtmltopdf', 'bin', 'wkhtmltopdf.exe')
+# if not os.path.isfile(wkhtmltopdf_path):
+#    raise FileNotFoundError("wkhtmltopdf executable not found at %s" % wkhtmltopdf_path)
 # Configure pdfkit to use the binary
-config = pdfkit.configuration(wkhtmltopdf=wkhtmltopdf_path)
+# config = pdfkit.configuration(wkhtmltopdf=wkhtmltopdf_path)
 
 def session():
     if 'course_select' not in st.session_state:
@@ -175,13 +175,13 @@ def gen_cert(username):
             else: 
                 st.error('Pic generation error')
         with right1:
-            html = template.render(student=student_str,course=course_str,date=date.today().strftime("%B %d, %Y"),)
-            pdf = pdfkit.from_string(html, False,configuration=config)
-            file = student_str +'_' + course_str +'_'+ datetime.datetime.now().strftime("%Y%m%d") +'.pdf'
-            if pdf:
-                st.download_button("⬇️ Download PDF Certification",data=pdf,file_name=file,mime="application/octet-stream",)
-            else: 
-                st.error('PDF Generation error')
+           # html = template.render(student=student_str,course=course_str,date=date.today().strftime("%B %d, %Y"),)
+          #  pdf = pdfkit.from_string(html, False,configuration=config)
+          #  file = student_str +'_' + course_str +'_'+ datetime.datetime.now().strftime("%Y%m%d") +'.pdf'
+          #  if pdf:
+          #      st.download_button("⬇️ Download PDF Certification",data=pdf,file_name=file,mime="application/octet-stream",)
+          #  else: 
+          #      st.error('PDF Generation error')
 
 if __name__ == "__main__":
     session()
