@@ -160,25 +160,16 @@ def gen_cert(username):
     if submit:
         save_pic, file_name = generator(student_str,course_str)
 
-        left1,right1 =st.columns(2)
 
-        with left1:
-            if save_pic:
-                st.balloons()
-                # st.write(html, unsafe_allow_html=True)
-                # st.write("")
-                with open(save_pic, "rb") as file:
-                    btn = st.download_button(label=" ⬇️ Download PNG Certification",data=file,file_name=file_name,mime="image/png")
-                    if btn:
-                        st.success('Download finish') 
-                st.success("🎉 Your diploma was generated!")    
-            else: 
-                st.error('Pic generation error')
-        with right1:
-           # html = template.render(student=student_str,course=course_str,date=date.today().strftime("%B %d, %Y"),)
-          #  pdf = pdfkit.from_string(html, False,configuration=config)
-          #  file = student_str +'_' + course_str +'_'+ datetime.datetime.now().strftime("%Y%m%d") +'.pdf'
-          #  if pdf:
-          #      st.download_button("⬇️ Download PDF Certification",data=pdf,file_name=file,mime="application/octet-stream",)
-          #  else: 
-          #      st.error('PDF Generation error')
+        if save_pic:
+            st.balloons()
+            # st.write(html, unsafe_allow_html=True)
+            # st.write("")
+            with open(save_pic, "rb") as file:
+                btn = st.download_button(label=" ⬇️ Download PNG Certification",data=file,file_name=file_name,mime="image/png")
+                if btn:
+                    st.success('Download finish') 
+            st.success("🎉 Your diploma was generated!")    
+        else: 
+            st.error('Pic generation error')
+
