@@ -182,5 +182,3 @@ def gen_cert(username):
           #      st.download_button("⬇️ Download PDF Certification",data=pdf,file_name=file,mime="application/octet-stream",)
           #  else: 
           #      st.error('PDF Generation error')
-
-
