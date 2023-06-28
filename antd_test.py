@@ -98,7 +98,7 @@ def get_user(self):
     fetched_cookies = self.cookies
     if '__streamlit_login_signup_ui_username__' in fetched_cookies.keys():
         user_name=fetched_cookies['__streamlit_login_signup_ui_username__']
-    else 
+    else:
         user_name='Jeremy Xu'
 
     with open("_secret_auth_.json", "r") as auth_json:
